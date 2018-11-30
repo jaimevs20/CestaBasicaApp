@@ -4,4 +4,7 @@
     <string name="bnt_logar">Entrar</string>
     <string name="btn_enviar">Enviar</string>
     <string name="adicionar_pequisa_titulo">Nova Pesquisa</string>
+    <string name="btn_listar">Listar</string>
+    <string name="listar_pesquisas_titulo">Pesquisas Realizadas</string>
+    <string name="btn_adicionar">Adicionar</string>
 </resources>

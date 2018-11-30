@@ -54,7 +54,7 @@ public class NovaPesquisaActivity extends AppCompatActivity {
         btnEnviarPesquisa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isEmpty(nomeProduto) || isEmpty(valorProduto) || isEmpty(data))
+                if(isEmpty(valorProduto) || isEmpty(data))
                     Toast.makeText(getApplicationContext(), "Preencha todas as informações", Toast.LENGTH_SHORT).show();
 
                 else{
