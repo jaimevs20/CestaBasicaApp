@@ -15,7 +15,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         Button btn_entrar = findViewById(R.id.btn_entrar);
-        Button btnNovoUser = findViewById(R.id.btn_novo_user);
+
 
         btn_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,14 +23,6 @@ public class LoginActivity extends AppCompatActivity {
                 Intent it = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(it);
 
-            }
-        });
-
-        btnNovoUser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent it = new Intent(LoginActivity.this, UserActivity.class);
-                startActivity(it);
             }
         });
     }
