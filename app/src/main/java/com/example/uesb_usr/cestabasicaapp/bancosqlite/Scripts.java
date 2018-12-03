@@ -65,7 +65,7 @@ public class Scripts {
                 "    id          INTEGER       PRIMARY KEY AUTOINCREMENT,\n" +
                 "    fk_produto  INTEGER       REFERENCES produtos (id),\n" +
                 "    valor       DOUBLE,\n" +
-                "    data        DATETIME,\n" +
+                "    data        DATE,\n" +
                 "    ocorrencia  VARCHAR (255),\n" +
                 "    promocao    BOOLEAN,\n" +
                 "    observacoes TEXT\n" +
@@ -74,4 +74,18 @@ public class Scripts {
         return sql.toString();
     }
 
+    public static String getCreateUser() {
+        StringBuilder sql = new StringBuilder();    // concatena o script sql
+
+        sql.append("CREATE TABLE user (\n" +
+                "    id          INTEGER       PRIMARY KEY AUTOINCREMENT,\n" +
+                "    nome  VARCHAR (255),\n" +
+                "    email  VARCHAR (255),\n" +
+                "    senha  VARCHAR (255),\n" +
+                "    estado  VARCHAR (255),\n" +
+                "    cidade  VARCHAR (255),\n" +
+                ");");
+
+        return sql.toString();
+    }
 }

@@ -60,6 +60,7 @@
                 android:text="@string/bnt_logar"
                 android:background="@color/colorAccent"
                 android:textColor="@android:color/background_light" />
+
         </LinearLayout>
 
 

@@ -7,4 +7,6 @@
     <string name="btn_listar">Listar</string>
     <string name="listar_pesquisas_titulo">Pesquisas Realizadas</string>
     <string name="btn_adicionar">Adicionar</string>
+    <string name="novo_user_titulo">Novo Usuário</string>
+    <string name="btn_new_user">Cadastre-se</string>
 </resources>
