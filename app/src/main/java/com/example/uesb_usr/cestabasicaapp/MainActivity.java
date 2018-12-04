@@ -17,13 +17,16 @@ public class MainActivity extends AppCompatActivity {
     private SQLiteDatabase conexao;                // banco sqlite
     private CestaOpenHelper cestaOpenHelper;        // dados do banco sqlite
 
+    private Button btnTelaAdicionar;
+    private Button btnTelaListarPesquisas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);     // associa a activity a um layout
 
-        Button btnTelaAdicionar = findViewById(R.id.btn_tela_adicionar);    //botão de redirecionamento de create
-        Button btnTelaListarPesquisas = findViewById(R.id.btn_listar_pesquisas); //botão de redirecionamento de list
+        btnTelaAdicionar = findViewById(R.id.btn_tela_adicionar);    //botão de redirecionamento de create
+        btnTelaListarPesquisas = findViewById(R.id.btn_listar_pesquisas); //botão de redirecionamento de list
 
         criarConexao();     //inicia a conexão com o banco sqlite
 
@@ -49,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             cestaOpenHelper = new CestaOpenHelper(this);
             conexao = cestaOpenHelper.getWritableDatabase();    // utilizado para persistência dentro do banco - incluindo leitura
 
-            Toast.makeText(getApplicationContext(), "Conexão bem sucedida ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Conexão bem sucedida - Main", Toast.LENGTH_SHORT).show();
 
         } catch (SQLException ex) {
             AlertDialog.Builder dlg = new AlertDialog.Builder(this);

@@ -4,7 +4,8 @@ import java.text.DateFormat;
 
 public class Pesquisa {
     Produto produto;
-    int id, fk_produto;
+    int id;
+    String nome_produto;
     double valor;
     String data;
     String ocorrencia, observacoes;
@@ -23,15 +24,15 @@ public class Pesquisa {
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.id = id+1;
     }
 
-    public int getFk_produto() {
-        return fk_produto;
+    public String getNome_produto() {
+        return nome_produto;
     }
 
-    public void setFk_produto(Produto produto) {
-        this.fk_produto = produto.getId();
+    public void setNome_produto(String nome_produto) {
+        this.nome_produto = nome_produto;
     }
 
     public double getValor() {

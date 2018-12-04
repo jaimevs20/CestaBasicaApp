@@ -10,6 +10,7 @@
 
     <!-- Geral -->
     <LinearLayout
+        android:id="@+id/layout_nova_pesquisa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -99,7 +100,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             android:text="@string/btn_enviar"
-            android:textColor="@android:color/background_light"/>
+            android:textColor="@android:color/background_light" />
 
     </LinearLayout>
 </LinearLayout>

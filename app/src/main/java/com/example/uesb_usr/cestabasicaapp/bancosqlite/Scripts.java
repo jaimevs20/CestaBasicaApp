@@ -63,9 +63,9 @@ public class Scripts {
 
         sql.append("CREATE TABLE pesquisa_produtos (\n" +
                 "    id          INTEGER       PRIMARY KEY AUTOINCREMENT,\n" +
-                "    fk_produto  INTEGER       REFERENCES produtos (id),\n" +
+                "    nome_produto  STRING,\n" +
                 "    valor       DOUBLE,\n" +
-                "    data        DATE,\n" +
+                "    data        STRING,\n" +
                 "    ocorrencia  VARCHAR (255),\n" +
                 "    promocao    BOOLEAN,\n" +
                 "    observacoes TEXT\n" +

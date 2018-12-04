@@ -21,7 +21,7 @@ public class RepositorioPesquisa {
 
     public void inserir(Pesquisa pesquisa){
         ContentValues content = new ContentValues();
-        content.put("FK_PRODUTO", pesquisa.getFk_produto() );
+        content.put("NOME_PRODUTO", pesquisa.getNome_produto() );
         content.put("VALOR",pesquisa.getValor());
         content.put("DATA",pesquisa.getData());
         content.put("OCORRENCIA",pesquisa.getOcorrencia());
@@ -97,10 +97,10 @@ public class RepositorioPesquisa {
 
             pesquisa.setId(resultado.getInt(resultado.getColumnIndexOrThrow("ID"))) ;
             //pesq.setFk_produto(resultado.getInt(resultado.getColumnIndexOrThrow("FK_PRODUTO"))); ;
-            pesquisa.setValor(resultado.getDouble(resultado.getColumnIndexOrThrow("ID"))); ;
-            pesquisa.setData(resultado.getString(resultado.getColumnIndexOrThrow("ID"))); ;
-            pesquisa.setOcorrencia(resultado.getString(resultado.getColumnIndexOrThrow("ID"))); ;
-            pesquisa.setObservacoes(resultado.getString(resultado.getColumnIndexOrThrow("ID"))); ;
+            pesquisa.setValor(resultado.getDouble(resultado.getColumnIndexOrThrow("VALOR"))); ;
+            pesquisa.setData(resultado.getString(resultado.getColumnIndexOrThrow("DATA"))); ;
+            pesquisa.setOcorrencia(resultado.getString(resultado.getColumnIndexOrThrow("OCORRENCIA"))); ;
+            pesquisa.setObservacoes(resultado.getString(resultado.getColumnIndexOrThrow("OBSERVACOES"))); ;
 
             return pesquisa;
         }
