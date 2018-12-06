@@ -10,12 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.uesb_usr.cestabasicaapp.bancosqlite.CestaOpenHelper;
 
 public class MainActivity extends AppCompatActivity {
-
-    private SQLiteDatabase conexao;                // banco sqlite
-    private CestaOpenHelper cestaOpenHelper;        // dados do banco sqlite
 
     private Button btnTelaAdicionar;
     private Button btnTelaListarPesquisas;
@@ -27,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         btnTelaAdicionar = findViewById(R.id.btn_tela_adicionar);    //botão de redirecionamento de create
         btnTelaListarPesquisas = findViewById(R.id.btn_listar_pesquisas); //botão de redirecionamento de list
-
-        criarConexao();     //inicia a conexão com o banco sqlite
 
         btnTelaAdicionar.setOnClickListener(new View.OnClickListener() {    // classe para eventos no botão
             @Override
@@ -47,19 +41,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void criarConexao() {
-        try {
-            cestaOpenHelper = new CestaOpenHelper(this);
-            conexao = cestaOpenHelper.getWritableDatabase();    // utilizado para persistência dentro do banco - incluindo leitura
-
-            Toast.makeText(getApplicationContext(), "Conexão bem sucedida - Main", Toast.LENGTH_SHORT).show();
-
-        } catch (SQLException ex) {
-            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setTitle("Erro de conexão");
-            dlg.setMessage(ex.getMessage());
-            dlg.setNeutralButton("OK", null);
-            dlg.show();
-        }
-    }
 }
