@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 public class NovaPesquisaActivity extends AppCompatActivity {
 
-    private SQLiteDatabase conexao;                // banco sqlite
     boolean promo;
     EditText nomeProduto;
     EditText valorProduto;

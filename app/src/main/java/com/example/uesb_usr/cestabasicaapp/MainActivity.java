@@ -10,6 +10,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.uesb_usr.cestabasicaapp.modelos.User;
+import com.example.uesb_usr.cestabasicaapp.servicos.UserService;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +43,25 @@ public class MainActivity extends AppCompatActivity {
         btnTelaListarPesquisas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Em Construção ", Toast.LENGTH_SHORT).show();
+                UserService userService = UserService.retrofit.create(UserService.class);
+                final Call<User> call = userService.buscar(1);
+                call.enqueue(new Callback<User>() {
+                    @Override
+                    public void onResponse(Call<User> call, Response<User> response) {
+                        int cod = response.code();
+                        if (cod == 200) {
+                            User user = response.body();
+                            Toast.makeText(getBaseContext(), "Nome: " + user.name, Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(getBaseContext(), "Erro: " + String.valueOf(cod), Toast.LENGTH_LONG).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<User> call, Throwable t) {
+
+                    }
+                });
             }
         });
     }
