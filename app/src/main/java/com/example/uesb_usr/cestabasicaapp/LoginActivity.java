@@ -30,7 +30,25 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent it = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(it);
+                UserService userService = UserService.retrofit.create(UserService.class);
+                final Call<User> call = userService.buscar(1);
+                call.enqueue(new Callback<User>() {
+                    @Override
+                    public void onResponse(Call<User> call, Response<User> response) {
+                        int cod = response.code();
+                        if (cod == 200) {
+                            User user = response.body();
+                            Toast.makeText(getBaseContext(), "Nome: " + user.nome, Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(getBaseContext(), "Erro: " + String.valueOf(cod), Toast.LENGTH_LONG).show();
+                        }
+                    }
 
+                    @Override
+                    public void onFailure(Call<User> call, Throwable t) {
+
+                    }
+                });
 
             }
         });

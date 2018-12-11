@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class User {
     public int id;
-    public String name;
+    public String nome;
     public String email;
     public String password;
 

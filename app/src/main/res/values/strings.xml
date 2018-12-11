@@ -9,4 +9,6 @@
     <string name="btn_adicionar">Adicionar</string>
     <string name="novo_user_titulo">Novo Usuário</string>
     <string name="btn_new_user">Cadastre-se</string>
+    <string name="list_id">ID</string>
+    <string name="list_produto">Produto</string>
 </resources>

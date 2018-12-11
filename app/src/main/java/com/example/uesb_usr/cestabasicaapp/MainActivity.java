@@ -43,25 +43,8 @@ public class MainActivity extends AppCompatActivity {
         btnTelaListarPesquisas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UserService userService = UserService.retrofit.create(UserService.class);
-                final Call<User> call = userService.buscar(1);
-                call.enqueue(new Callback<User>() {
-                    @Override
-                    public void onResponse(Call<User> call, Response<User> response) {
-                        int cod = response.code();
-                        if (cod == 200) {
-                            User user = response.body();
-                            Toast.makeText(getBaseContext(), "Nome: " + user.name, Toast.LENGTH_LONG).show();
-                        } else {
-                            Toast.makeText(getBaseContext(), "Erro: " + String.valueOf(cod), Toast.LENGTH_LONG).show();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<User> call, Throwable t) {
-
-                    }
-                });
+                Intent it = new Intent(MainActivity.this, PesquisasListActivity.class);
+                startActivity(it);
             }
         });
     }
