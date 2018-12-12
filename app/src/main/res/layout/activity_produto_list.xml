@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NovaPesquisaActivity">
+    tools:context=".ProdutoListActivity">
 
     <!-- Geral -->
     <LinearLayout
@@ -22,7 +22,7 @@
             android:background="@color/colorPrimaryDark"
             android:gravity="center"
             android:padding="16dp"
-            android:text="@string/listar_pesquisas_titulo"
+            android:text="@string/produtos_cadastrados"
             android:textAppearance="?android:textAppearanceLargeInverse" /> <!-- Inverte a cor -->
 
         <!-- Conteúdo -->
@@ -35,7 +35,7 @@
 
 
             <ListView
-                android:id="@+id/list_pesquisas"
+                android:id="@+id/list_produtos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>

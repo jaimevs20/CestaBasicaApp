@@ -17,12 +17,11 @@ public class PesquisaAdapter extends ArrayAdapter<Pesquisa> {
     private final List<Pesquisa> pesquisas;
     Produto produto;
 
-    public PesquisaAdapter(Context context, int resource, Context context1, List<Pesquisa> pesquisas) {
-        super(context, resource);
-        this.context = context1;
+    public PesquisaAdapter(Context context, List<Pesquisa> pesquisas) {
+        super(context, R.layout.linha, pesquisas);
+        this.context = context;
         this.pesquisas = pesquisas;
     }
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -32,9 +31,11 @@ public class PesquisaAdapter extends ArrayAdapter<Pesquisa> {
         View rowView = inflater.inflate(R.layout.linha, parent, false);
         TextView id = rowView.findViewById(R.id.txtId);
         TextView produtoNome = rowView.findViewById(R.id.txt_prod_nome);
+        TextView produtoValor = rowView.findViewById(R.id.txt_prod_valor);
 
         id.setText(pesquisas.get(position).getId());
         produtoNome.setText(pesquisas.get(position).nomeProduto(produto));
+        produtoValor.setText((int) pesquisas.get(position).getValor());
 
         return rowView;
     }

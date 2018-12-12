@@ -11,4 +11,9 @@
     <string name="btn_new_user">Cadastre-se</string>
     <string name="list_id">ID</string>
     <string name="list_produto">Produto</string>
+    <string name="list_prod_valor">Valor</string>
+    <string name="classe_produto">Classe</string>
+    <string name="item_produto">Item</string>
+    <string name="grupo_produto">Grupo</string>
+    <string name="produtos_cadastrados">Produtos Cadastrados</string>
 </resources>

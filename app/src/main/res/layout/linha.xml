@@ -45,6 +45,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/list_produto" />
+
+            <TextView
+                android:id="@+id/txt_prod_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_prod_valor" />
         </LinearLayout>
         <!-- Fim conteúdo -->
 
