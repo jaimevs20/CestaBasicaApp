@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
                         int cod = response.code();
                         if (cod == 200) {
                             User user = response.body();
-                            Toast.makeText(getBaseContext(), "Nome: " + user.nome, Toast.LENGTH_LONG).show();
+                            Toast.makeText(getBaseContext(), "Nome: " + user.name, Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(getBaseContext(), "Erro: " + String.valueOf(cod), Toast.LENGTH_LONG).show();
                         }

@@ -32,7 +32,7 @@ public class PesquisasListActivity extends AppCompatActivity {
 
         dialog = new ProgressDialog(PesquisasListActivity.this);
         dialog.setMessage("Carregando...");
-        dialog.setCancelable(false);
+        dialog.setCancelable(true);
         dialog.show();
 
         Call<List<Pesquisa>> call = pesquisaService.listar();
@@ -56,9 +56,6 @@ public class PesquisasListActivity extends AppCompatActivity {
 
             }
         });
-
-
-
 
     }
 }

@@ -54,11 +54,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="@color/colorAccent"
                 android:paddingLeft="16dp"
-                android:paddingTop="16dp"
                 android:paddingRight="16dp"
                 android:text="@string/bnt_logar"
-                android:background="@color/colorAccent"
                 android:textColor="@android:color/background_light" />
 
         </LinearLayout>
