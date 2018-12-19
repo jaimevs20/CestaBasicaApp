@@ -28,7 +28,7 @@
             android:gravity="center"
             android:padding="16dp"
             android:text="@string/login_titulo"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorPrimary"
             android:textAppearance="?android:textAppearanceLargeInverse" /> <!-- Inverte a cor -->
 
         <!-- Conteúdo -->
