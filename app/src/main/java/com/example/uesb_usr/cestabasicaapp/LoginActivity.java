@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_esqueceu_senha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://www.cpds.uesb.br/cesta/recovery";    //https://cpds.uesb.br/cesta/password/reset
+                String url = "https://cpds.uesb.br/cesta/password/reset";    //https://cpds.uesb.br/cesta/password/reset
 
                 Toast.makeText(getBaseContext(), "Aguarde...", Toast.LENGTH_LONG).show();
 
