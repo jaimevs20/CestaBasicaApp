@@ -33,14 +33,14 @@ public class LoginActivity extends AppCompatActivity {
                 Intent it = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(it);
                 UserService userService = UserService.retrofit.create(UserService.class);
-                final Call<User> call = userService.buscar(1);
+                final Call<User> call = userService.buscar(1);      //busca usuário com id 1
                 call.enqueue(new Callback<User>() {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
                         int cod = response.code();
                         if (cod == 200) {
                             User user = response.body();
-                            Toast.makeText(getBaseContext(), "Nome: " + user.name, Toast.LENGTH_LONG).show();
+                            Toast.makeText(getBaseContext(), "Nome: " + user.name, Toast.LENGTH_LONG).show();   //mensagem com o nome do usuário com id 1
                         } else {
                             Toast.makeText(getBaseContext(), "Erro: " + String.valueOf(cod), Toast.LENGTH_LONG).show();
                         }
@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_esqueceu_senha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://cpds.uesb.br/cesta/password/reset";    //https://cpds.uesb.br/cesta/password/reset
+                String url = "https://cpds.uesb.br/cesta/password/reset";    //link de recuperação de senha
 
                 Toast.makeText(getBaseContext(), "Aguarde...", Toast.LENGTH_LONG).show();
 
