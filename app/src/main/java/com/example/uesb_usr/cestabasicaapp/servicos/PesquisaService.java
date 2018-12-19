@@ -15,7 +15,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface PesquisaService {
-    String url = "http://10.8.113.1:8080/"; //Caminho do WebService
+    String url = "http://172.29.34.33:8080/"; //Caminho do WebService
 
     @POST("WSCesta/webresources/pesquisa.pesquisaprodutos/inserir")
     Call<Void>inserePesquisa(@Body Produto produto);

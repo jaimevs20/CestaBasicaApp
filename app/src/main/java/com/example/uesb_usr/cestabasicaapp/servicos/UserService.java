@@ -11,7 +11,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface UserService {
-    String url = "http://10.8.113.1:8080/"; //Caminho do WebService
+
+    String url = "http://172.29.34.33:8080/"; //Caminho do WebService
     //String url = "https://api.github.com/"; //Caminho do WebService
     @GET("WSCesta/webresources/pesquisa.users/buscar/{id}/")
     Call<User> buscar(@Path("id") int id);   // usuário pelo id
