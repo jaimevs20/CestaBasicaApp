@@ -13,6 +13,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/cesta_icon_layer" />
 
         <!-- Nova Pesquisa -->
         <LinearLayout
