@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.uesb_usr.cestabasicaapp.modelos.Produto;
 import com.example.uesb_usr.cestabasicaapp.modelos.User;
 import com.example.uesb_usr.cestabasicaapp.servicos.UserService;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnTelaAdicionar;
     private Button btnTelaListarPesquisas;
+    private Button btnTelaListarProdutos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnTelaAdicionar = findViewById(R.id.btn_tela_adicionar);    //botão de redirecionamento de create
         btnTelaListarPesquisas = findViewById(R.id.btn_listar_pesquisas); //botão de redirecionamento de list
+        btnTelaListarProdutos = findViewById(R.id.btn_listar_produtos);
 
         btnTelaAdicionar.setOnClickListener(new View.OnClickListener() {    // classe para eventos no botão
             @Override
@@ -44,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(MainActivity.this, PesquisasListActivity.class);
+                startActivity(it);
+            }
+        });
+
+        btnTelaListarProdutos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(MainActivity.this, ProdutoListActivity.class);
                 startActivity(it);
             }
         });

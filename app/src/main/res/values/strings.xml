@@ -16,4 +16,6 @@
     <string name="item_produto">Item</string>
     <string name="grupo_produto">Grupo</string>
     <string name="produtos_cadastrados">Produtos Cadastrados</string>
+    <string name="listar_produtos_titulo">Produtos Cadastrados</string>
+    <string name="esqueceu_senha">Esqueceu sua senha?</string>
 </resources>

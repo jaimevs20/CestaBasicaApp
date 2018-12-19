@@ -1,6 +1,7 @@
 package com.example.uesb_usr.cestabasicaapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         Button btn_entrar = findViewById(R.id.btn_entrar);
+        Button btn_esqueceu_senha = findViewById(R.id.btn_esqueceu_senha);
 
         btn_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,19 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+
+        btn_esqueceu_senha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.cpds.uesb.br/cesta/recovery";    //https://cpds.uesb.br/cesta/password/reset
+
+                Toast.makeText(getBaseContext(), "Aguarde...", Toast.LENGTH_LONG).show();
+
+                Uri uriUrl = Uri.parse(url);
+                Intent it = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(it);
             }
         });
     }
